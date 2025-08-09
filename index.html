@@ -13,15 +13,17 @@
 
 <body>
     <header>
-        <nav class="header-top bg-body-secondary">
-            <div class="container d-flex justify-content-between align-items-end ">
-                <div class="col-xl-4 col-lg-4 d-md-none">
+        <nav class="bg-body-secondary">
+            <div class="header-top container d-flex justify-content-between align-items-end ">
+                <div>
                     <p class=" m-0 py-2 h-100"><i class="fa-solid fa-phone"></i> Need Help? Call us (+855)091-555-788
                     </p>
                 </div>
-                <div class=" col-12 col-xl-4 col-lg-4 col-md-12"></div>
-                <p class="m-0 py-2"><i class="fa-regular fa-truck"></i> Free shipping buy over 50$</p>
-                <div class="col-xl-4 col-lg-4">
+                <div>
+                    <p class="m-0 py-2"><i class="fa-regular fa-truck"></i> Free shipping buy over 50$</p>
+                </div>
+
+                <div>
                     <button type="button" class="btn"><i class="fa-solid fa-language"></i> EN <span
                             class="dropdown-toggle"></span></button>
                     <button type="button" class="btn"><i class="fa-solid fa-dollar-sign"></i> USD <span
@@ -32,31 +34,105 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light border py-3">
             <div class="container">
                 <a class="navbar-brand fw-bolder fs-3" href="#">NiceShop</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
 
 
-                <div class="input-group border rounded w-50 ">
+
+                <div class="input-group border rounded w-50">
                     <input type="text" class="form-control border-0" placeholder="Search for products"
                         aria-label="search for products" aria-describedby="button-addon2">
                     <button class="btn btn-dark rounded px-4 m-1" type="button" id="button-addon2"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
 
-                <div class="">
-                    <button type="button" class="btn fs-4 d-none "><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="btn-right">
+                    <button type="button" class="btn fs-4 " data-bs-toggle="collapse"
+                        data-bs-target="#search-collapse"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button type="button" class="btn fs-4"><i class="fa-regular fa-user"></i></button>
                     <button type="button" class="btn fs-4"><i class="fa-regular fa-heart"></i></button>
                     <button type="button" class="btn fs-4"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="button" class="btn fs-4 navbar-toggler-icon d-none"></button>
+                    <button type="button" class="btn fs-4 navbar-toggler-icon" data-bs-toggle="modal"
+                        data-bs-target="#menu"></button>
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <!--=========================== collapse search  ==========================-->
+        <div class="collapse" id="search-collapse">
+            <div class="bg-light p-4">
+                <div class="input-group border rounded w-100">
+                    <input type="text" class="form-control border-0" placeholder="Search for products"
+                        aria-label="search for products" aria-describedby="button-addon2">
+                    <button class="btn btn-dark rounded px-4 m-1" type="button" id="button-addon2"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+
+        </div>
+        <!--================================ end  =================================-->
+
+        <!--============================= menu modal  =========================-->
+        <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="navbar-nav w-100 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Product Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Checkout</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li class="nav-item sub-dropdown">
+                                        <a class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                            id="sub-dropdown" role="button" href="#" aria-expanded="false">Deep
+                                            Dropdown</a>
+                                        <ul class="sub-dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="nav-item"><a class="dropdown-item" href="#">Action</a></li>
+                                            <li class="nav-item"><a class="dropdown-item" href="#">Something</a></li>
+                                            <li class="nav-item"><a class="dropdown-item" href="#">Test</a></li>
+                                            <li class="nav-item"><a class="dropdown-item" href="#">News</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ================================== end ================================-->
+        <nav class="navbar navbar-menu navbar-expand-lg navbar-light bg-dark ">
             <div class="container">
 
 
@@ -81,16 +157,23 @@
                             <a class="nav-link" href="#">Checkout</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
+                                <li class="nav-item sub-dropdown">
+                                    <a class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                        id="sub-dropdown" role="button" href="#" aria-expanded="false">Deep Dropdown</a>
+                                    <ul class="sub-dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li class="nav-item"><a class="dropdown-item" href="#">Action</a></li>
+                                        <li class="nav-item"><a class="dropdown-item" href="#">Something</a></li>
+                                        <li class="nav-item"><a class="dropdown-item" href="#">Test</a></li>
+                                        <li class="nav-item"><a class="dropdown-item" href="#">News</a></li>
+                                    </ul>
                                 </li>
+
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
@@ -106,6 +189,7 @@
 
 
     </header>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
